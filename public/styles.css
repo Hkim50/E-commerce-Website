@@ -11,6 +11,13 @@ a {
     text-decoration: none;
 }
 
+img.square {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    object-position: center;
+    background-color: lightgrey;
+}
+
 /* a:hover css for hovering links*/
 
 footer {
@@ -20,6 +27,18 @@ footer {
 .category {
     text-align: center;
     font-family: monospace;
+}
+
+.homepage-product-sub {
+    text-align: right;
+    font-family: monospace;
+    color:black;
+}
+
+.homepage-product-price {
+    text-align: right;
+    font-family: monospace;
+    color: rgb(110, 110, 110);
 }
 
 .column {
