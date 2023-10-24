@@ -6,9 +6,8 @@ body {
     margin: 0;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+img {
+    width: 100%;
 }
 
 img.square {
@@ -18,10 +17,29 @@ img.square {
     background-color: lightgrey;
 }
 
-/* a:hover css for hovering links*/
+img.mix {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    object-position: center;
+}
 
 footer {
-    background-color: black;
+    height:100px;
+    background-color: rgb(26, 26, 26);
+}
+
+footer a {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer div {
+    font-family: monospace;
+    padding: 5px;
 }
 
 .category {
@@ -41,10 +59,17 @@ footer {
     color: rgb(110, 110, 110);
 }
 
-.column {
+.column-3 {
     float: left;
     width: 33%;
     padding: 5px;
+}
+
+.column-4 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    font-family: monospace;
 }
 
 .row::after {
@@ -54,8 +79,11 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-    .column {
+    .column-3 {
         width: 100%;
+    }
+    .column-4 {
+        width: 50%;
     }
 }
 
@@ -63,4 +91,25 @@ footer {
     width: 100%;
     height: 400px;
     object-fit: cover;
+}
+
+h1.page-title {
+    font-family: monospace;
+    text-align: center;
+    padding: 30px;
+}
+
+#about-us-description {
+    font-family: monospace;
+    padding: 5px;
+    font-size: 16px;
+    margin: 50px;
+}
+
+.self-portrait {
+    aspect-ratio: 1/ 1.2;
+    object-fit: cover;
+    border: 2px solid rgb(56, 56, 56);
+    border-radius: 5px;
+    filter: grayscale();
 }
