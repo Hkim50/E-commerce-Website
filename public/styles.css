@@ -296,3 +296,44 @@ h1.page-title {
 .signup label:hover{
   text-decoration: underline;
 }
+
+#cbody {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.cnav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.cnav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.cnav a:hover {
+    text-decoration: underline;
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.cart-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
