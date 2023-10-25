@@ -170,3 +170,39 @@ h1.page-title {
 .dropdown-menu:hover .dropdown-content{
     display: block;
 }
+
+#Fbody {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.FA {
+    text-align: center;
+}
+
+.faq {
+    margin-top: 20px;
+}
+
+.question {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.question h3 {
+    color: #333;
+}
+
+.question p {
+    color: #666;
+}
