@@ -24,7 +24,7 @@ img.mix {
 }
 
 footer {
-    height:100px;
+    height:150px;
     background-color: rgb(26, 26, 26);
 }
 
@@ -39,10 +39,14 @@ footer a:hover {
 
 footer div {
     font-family: monospace;
-    padding: 5px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .category {
+    padding-top: 150px;
+    padding-bottom: 30px;
     text-align: center;
     font-family: monospace;
 }
@@ -97,6 +101,13 @@ h1.page-title {
     font-family: monospace;
     text-align: center;
     padding: 30px;
+}
+
+img.square:hover {
+    -webkit-transform:scale(1.01);
+    -ms-transform:scale(1.01);
+    transform:scale(1.01);
+    transition:0.1s ease;
 }
 
 #about-us-description {
