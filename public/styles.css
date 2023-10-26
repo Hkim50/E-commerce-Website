@@ -116,9 +116,15 @@ h1.page-title {
 .navbar {
     background-color: gold;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
 }
-
+.search-bar{
+    display: flex;
+    align-items: center;
+}
 .search-bar input {
     padding: 5px;
     border: none;
@@ -132,13 +138,15 @@ h1.page-title {
     padding: 5px 10px;
     margin-left: 5px;
 }
-
+.navbar-right{
+    display: flex;
+    align-items: center;
+}
 .user-actions {
     text-decoration: none;
     color: white;
-    margin: 0 10px;
+    margin-right: -750px;
 }
-
 .dropdown-menu {
     position: relative;
     display: inline-block;
