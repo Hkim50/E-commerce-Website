@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login & Registration Form</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <script src="main.js"></script>
   <nav class="navbar">
     <div class="search-bar">
       <input type="text" placeholder="Search...">
@@ -36,10 +36,10 @@
     <div class="login form">
       <header>Login</header>
       <form action="#">
-        <input type="text" placeholder="Enter your email">
-        <input type="password" placeholder="Enter your password">
+        <input type="text" placeholder="Enter your email" id="loginEmail">
+        <input type="password" placeholder="Enter your password" id="loginPassword">
         <a href="#">Forgot password?</a>
-        <a href="index.html"><input type="button" class="button" value="Login"></a>
+        <input type="button" class="button" value="Login" onclick="login()">
       </form>
       <div class="signup">
         <span class="signup">Don't have an account?
@@ -50,10 +50,10 @@
     <div class="registration form">
       <header>Signup</header>
       <form action="#">
-        <input type="text" placeholder="Enter your email">
-        <input type="password" placeholder="Create a password">
-        <input type="password" placeholder="Confirm your password">
-        <a href="index.html"><input type="button" class="button" value="Signup"></a>
+        <input type="text" placeholder="Enter your email" id="signupEmail">
+        <input type="password" placeholder="Create a password" id="signupPassword">
+        <input type="password" placeholder="Confirm your password" id="confirmPassword">
+        <input type="button" class="button" value="Signup" onclick="signup()">
       </form>
       <div class="signup">
         <span class="signup">Already have an account?
