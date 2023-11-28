@@ -377,3 +377,37 @@ img.square:hover {
     font-size: 18px;
     color: #555;
 }
+
+.dropdown-size { 
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn { 
+    background-color:white;
+    color:#333;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+.dropdown-contents {
+    display: none;
+    position: absolute; 
+    background-color:white;
+    min-width: 150px;
+    z-index: 1;  
+}
+
+.dropdown-contents a {
+    color:black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown-size:hover .dropdown-contents{
+    display:block;
+}
