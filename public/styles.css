@@ -427,3 +427,10 @@ body {
     color: var(--text-color);
     transition: background-color 0.5s,text-color 0.5s;
 }
+
+.product img {
+    max-width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
