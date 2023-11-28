@@ -58,3 +58,22 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, timer);
 }
+
+
+document.addEventListener('DOMContentLoaded', function(){
+  const ThemeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  const CurrentTheme = localStorage.getItem('theme');
+  if(CurrentTheme){
+    body.classList.add(CurrentTheme);
+  }
+
+  ThemeToggle.addEventListener('click' , function(){
+    body.classList.toggle('dark-theme');
+
+    const theme = body.classList.contains('dark-theme') ? 'dark-theme' : '';
+    localStorage.setItem('theme', theme);
+  });
+
+});

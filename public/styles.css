@@ -411,3 +411,19 @@ img.square:hover {
 .dropdown-size:hover .dropdown-contents{
     display:block;
 }
+
+:root {
+    --background-color: white;
+    --text-color: black;
+}
+
+body.dark-theme {
+    --background-color: black;
+    --text-color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s,text-color 0.5s;
+}
