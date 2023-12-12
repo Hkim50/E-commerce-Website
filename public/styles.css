@@ -14,7 +14,8 @@ img.square {
     aspect-ratio: 1/1;
     object-fit: contain;
     object-position: center;
-    background-color: lightgrey;
+    border: 2px solid lightgrey;
+    background-color: white;
 }
 
 img.mix {
