@@ -61,7 +61,7 @@ function cart() {
 }
 
 function showSlides() {
-  const seconds = 8;
+  const seconds = 6;
 
   let i;
   let timer = seconds * 1000;
