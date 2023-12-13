@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <script src="main.js"></script>
+  <nav class="navbar">
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+    <button id = "theme-toggle">Choose Theme</button>
+    <div class="user-actions">
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="login.html">Login </a>
+      <a href="cart.html">Cart</a>
+    </div>
+    <div class="dropdown-menu">
+    </div>
+  </nav>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Signup</header>
+      <form action="#">
+        <input type="text" placeholder="Enter your email" id="signupEmail">
+        <input type="password" placeholder="Create a password" id="signupPassword">
+        <input type="password" placeholder="Confirm your password" id="confirmPassword">
+        <input type="button" class="button" value="Signup" onclick="signup()">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <a href="login.html">Login</a>
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>
