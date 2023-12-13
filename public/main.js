@@ -21,6 +21,10 @@ function signup() {
     .then((response) => response.json())
     .then((data) => {
       alert(data.message);
+
+      if (data.message === 'Registration successful') {
+        window.location.href = '/login.html';
+      }
     })
     .catch((error) => {
       console.error('Error during registration:', error);

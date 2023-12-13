@@ -29,31 +29,50 @@ connection.connect(function(err) {
 connection.query("CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, email VARCHAR(255), password VARCHAR(255))", function(err) {
   if (err) {
     console.error('error: ' + err.message);
+  } else {
+    // Reset the AUTO_INCREMENT value to 1
+    connection.query("ALTER TABLE users AUTO_INCREMENT = 1", function(err) {
+      if (err) {
+        console.error('error: ' + err.message);
+      }
+    });
   }
 });
 
 app.post('/register', express.json(), async (req, res) => {
-    const { email, password } = req.body;
-  
-    if (!email || !password) {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
       return res.status(400).json({ error: 'Email and password are required' });
-    }
-  
-    try {
-      const hashedPassword = await bcrypt.hash(password, 10);
-  
-      connection.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hashedPassword], (err, result) => {
-        if (err) {
+  }
+
+  // Check if the email and password already exist in the database
+  connection.query("SELECT * FROM users WHERE email = ? AND password = ?", [email, password], async (err, result) => {
+      if (err) {
           return res.status(500).json({ error: 'Internal server error' });
-        }
-  
-        res.status(200).json({ message: 'Registration successful' });
-      });
-    } catch (error) {
-      console.error('Error during registration:', error);
-      res.status(500).json({ error: 'Internal server error' });
-    }
+      }
+
+      if (result.length > 0) {
+          return res.status(409).json({ error: 'Email and password combination already exists' });
+      }
+
+      try {
+          const hashedPassword = await bcrypt.hash(password, 10);
+
+          // Insert user into the database
+          connection.query("INSERT INTO users (email, password) VALUES (?, ?)", [email, hashedPassword], (err, result) => {
+              if (err) {
+                  return res.status(500).json({ error: 'Internal server error' });
+              }
+
+              res.status(200).json({ message: 'Registration successful' });
+          });
+      } catch (error) {
+          console.error('Error during registration:', error);
+          res.status(500).json({ error: 'Internal server error' });
+      }
   });
+});
 
 app.post('/login', express.json(), async (req, res) => {
     const { email, password } = req.body;
