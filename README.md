@@ -1,8 +1,9 @@
 Group Project Website - in HTML & CSS & Javascript, Backend
 
-When you are ready to submit your assignment, tag that version in your repository with the following command:
+In the project directory, you can run:
 ```
-git tag -a CSS -m "TAG CSSVersion"
+node server317.js"
 
-git push origin --tags
 ```
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
